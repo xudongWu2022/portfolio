@@ -5,10 +5,13 @@ function ProjectCard({ project, t, lang }) {
     <article className="project-card">
       <div className="project-head">
         <h3 className="project-name mono">{project.name}</h3>
-        {project.local ? (
+        {project.badge ? (
+          <span className="project-badge">{project.badge[lang]}</span>
+        ) : project.local ? (
           <span className="project-badge">{t.projects.localNote}</span>
         ) : null}
       </div>
+      {project.role ? <div className="project-role mono">{project.role[lang]}</div> : null}
       <p className="project-summary">{project.summary[lang]}</p>
       <p className="project-desc">{project.description[lang]}</p>
       {project.roadmap ? (
@@ -25,9 +28,15 @@ function ProjectCard({ project, t, lang }) {
         ))}
       </div>
       <div className="project-actions">
-        <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-small">
-          {t.projects.viewGithub} ↗
-        </a>
+        {project.site ? (
+          <a href={project.site} target="_blank" rel="noreferrer" className="btn btn-small">
+            {t.projects.visitSite} ↗
+          </a>
+        ) : (
+          <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-small">
+            {t.projects.viewGithub} ↗
+          </a>
+        )}
       </div>
     </article>
   )

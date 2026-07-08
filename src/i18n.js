@@ -43,6 +43,7 @@ export const strings = {
       roadmap: 'Roadmap',
       stack: 'Stack',
       viewGithub: 'GitHub',
+      visitSite: 'Visit site',
       localNote: 'Local / private repo',
     },
     experience: {
@@ -91,6 +92,7 @@ export const strings = {
       roadmap: '路线图',
       stack: '技术栈',
       viewGithub: 'GitHub',
+      visitSite: '访问网站',
       localNote: '本地 / 私有仓库',
     },
     experience: {
@@ -178,6 +180,21 @@ export const experience = [
 ]
 
 export const projects = [
+  {
+    name: 'Finaric',
+    role: { en: 'Founding Engineer', zh: 'Founding Engineer / 创始工程师' },
+    summary: {
+      en: 'Relationship intelligence for wealth advisors — rehearse client meetings with AI, then get real-time coaching during the live conversation.',
+      zh: '面向财富顾问的关系智能平台 —— 用 AI 预演客户会谈，并在真实对话中获得实时提示。',
+    },
+    description: {
+      en: 'Finaric lets advisors practice upcoming meetings with an AI that remembers the full relationship history, then detects live signals — hesitation, concern, trust shifts — during the real conversation, before they surface in the CRM. It auto-updates client profiles, preserves longitudinal context, and ships FINRA/SEC-aligned data protection (PII pseudonymization, 256-bit encryption, US data residency). As a founding engineer on the early team, built core AI roleplay and real-time signal-detection features.',
+      zh: 'Finaric 让顾问用记得完整关系历史的 AI 预演即将到来的会谈，并在真实对话中实时检测信号 —— 犹豫、顾虑、信任变化 —— 在它们进入 CRM 之前就捕捉到。系统自动更新客户画像、保留跨会谈的长期上下文，并具备符合 FINRA/SEC 的数据保护（PII 假名化、256 位加密、美国境内数据存储）。作为早期团队的 founding engineer，构建了核心的 AI 预演对话与实时信号检测功能。',
+    },
+    tags: ['Next.js', 'FastAPI', 'Anthropic / OpenAI', 'WebRTC', 'Real-time AI', 'Compliance'],
+    site: 'https://finaric.com',
+    badge: { en: 'Live · Closed source', zh: '已上线 · 闭源' },
+  },
   {
     name: 'agent-spend-collector',
     summary: {
