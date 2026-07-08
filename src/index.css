@@ -1,13 +1,15 @@
 :root {
-  --bg: #0b0e14;
-  --surface: #12161f;
-  --surface-2: #171c28;
-  --border: #232a38;
-  --text: #e6e9ef;
-  --muted: #8b93a7;
-  --accent: #35d0ba;
-  --accent-2: #7c6cff;
-  --accent-glow: rgba(53, 208, 186, 0.15);
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f5f5f7;
+  --border: #e6e6ea;
+  --text: #14161a;
+  --muted: #5f6672;
+  --accent: #111318;
+  --accent-2: #3a3d44;
+  --accent-glow: rgba(20, 22, 26, 0.12);
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 8px 24px -12px rgba(20, 22, 26, 0.14);
+  --shadow-lg: 0 2px 4px rgba(20, 22, 26, 0.05), 0 18px 40px -18px rgba(20, 22, 26, 0.22);
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -47,8 +49,7 @@ a {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 50% at 15% 0%, rgba(124, 108, 255, 0.14), transparent 70%),
-    radial-gradient(50% 45% at 90% 10%, rgba(53, 208, 186, 0.12), transparent 70%);
+    radial-gradient(70% 45% at 50% -5%, rgba(20, 22, 26, 0.04), transparent 70%);
 }
 
 /* Nav */
@@ -60,7 +61,7 @@ a {
   align-items: center;
   gap: 1.5rem;
   padding: 0.9rem clamp(1rem, 5vw, 2rem);
-  background: rgba(11, 14, 20, 0.72);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -77,8 +78,7 @@ a {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 12px var(--accent-glow);
+  background: var(--accent);
 }
 
 .nav-links {
@@ -205,13 +205,13 @@ main {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #08131a;
+  background: var(--accent);
+  color: #ffffff;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px var(--accent-glow);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-ghost {
@@ -299,13 +299,14 @@ main {
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow);
   transition: transform 0.18s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 20px 40px -24px rgba(53, 208, 186, 0.4);
+  border-color: #d0d0d6;
+  box-shadow: var(--shadow-lg);
 }
 
 .project-head {
@@ -420,7 +421,7 @@ main {
 }
 
 .timeline-item.is-current .timeline-dot {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--accent);
   border-color: transparent;
   box-shadow: 0 0 0 4px var(--accent-glow);
 }
